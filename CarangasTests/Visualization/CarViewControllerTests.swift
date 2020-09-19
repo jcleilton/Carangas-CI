@@ -21,14 +21,12 @@ class CarViewControllerTests: XCTestCase {
         return car
     }
     
-    override func setUpWithError() throws {
-        try super.setUpWithError()
+    func setUpWithError() throws {
         sut = CarViewController.instantiateFromStoryboard(.visualization)
     }
 
-    override func tearDownWithError() throws {
+    func tearDownWithError() throws {
         sut = nil
-        try super.tearDownWithError()
     }
 
     func testVisualizationOfCar() {
